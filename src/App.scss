@@ -1,0 +1,31 @@
+@import './scss/Variables.scss';
+
+body {
+  font-family: 'Linden Hill', sans-serif;
+  background: $DarkBG;
+  color: $Light;
+  scroll-behavior: smooth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; // Make sure the body takes up the full viewport height
+  margin: 0;
+  
+  #root {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    background: $DarkBG;
+
+    h1, h2, h3, h4, h5, h6 {
+        color: $LightYellow;
+    }
+
+    hr {
+      height: 24px;
+      background: $Dark;
+      border: none;
+      margin: 0; 
+    }
+  }
+}

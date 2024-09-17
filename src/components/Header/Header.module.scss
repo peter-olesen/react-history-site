@@ -1,0 +1,72 @@
+@import '../../scss/Variables.scss';
+
+.BGImage {
+    height: 600px;
+    width: 100%;
+    background: linear-gradient(rgba(41, 40, 40, 0.21), rgba(41, 40, 40, 0.21)),
+    url(../../assets/images/mr-cup-fabien-barral-Fo5dTm6ID1Y-unsplash.jpg);
+    background-position: center 100%;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: -350px;
+}
+
+.HeaderElement {
+    width: 1154px;
+    height: 452px;
+    border: 24px solid;
+    background: $Dark;
+    border-image-source: linear-gradient(180deg, rgba(199, 189, 141, 0.33) 0%, rgba(210, 158, 98, 0.33) 100%);
+    border-image-slice: 1;
+    box-shadow: 0px -9px 19.7px 7px #00000040;
+    text-align: center;
+    position: relative;
+
+    .circle {
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        background: $LightYellow;
+        border-radius: 50%;
+    }
+
+    .circleTopLeft {
+        top: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .circleTopRight {
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+
+    .circleBottomLeft {
+        bottom: 0.5rem;
+        left: 0.5rem;
+    }
+
+    .circleBottomRight {
+        bottom: 0.5rem;
+        right: 0.5rem;
+    }
+
+    h1 {
+        font-family: 'Limelight', sans-serif;
+        font-size: 96px;
+        font-weight: 400;
+        line-height: 116.86px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 43.13px;
+        text-align: center;
+    }
+}
