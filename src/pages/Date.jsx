@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { PageTitle } from '../components/PageTitle/PageTitle'
-import { useState } from 'react';
+import { DarkModeButton } from '../components/DarkModeButton/DarkModeButton'
 
 export const Date = () => {
     // const today = new Date()
@@ -14,7 +15,7 @@ export const Date = () => {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error: {error.message}</p>
 
-    if (!data || !data.events) return <p>No events found.</p>
+    if (!data || !data.events) return <p>No events found or fetching events from database.</p>
 
     const sortedEvents = data.events.sort((a, b) => a.year - b.year)
 
@@ -25,6 +26,7 @@ export const Date = () => {
     return (
         <>
             <PageTitle title="By Date - History Site" />
+            <DarkModeButton />
             <ul>
                 {sortedEvents.slice(0, visibleCount).map((event, index) => (
                     <li key={index}>

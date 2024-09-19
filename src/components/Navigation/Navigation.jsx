@@ -7,7 +7,7 @@ export const Navigation = () => {
             <ul>
                 <li><NavLink className={({ isActive }) => isActive ? NavStyle.active : ''} to="/date">BY DATE</NavLink></li>
                 <li><NavLink className={({ isActive }) => isActive ? NavStyle.active : ''} to="/">TODAY</NavLink></li>
-                <li><NavLink className={({ isActive }) => isActive ? NavStyle.active : ''} to="/since">SINCE</NavLink></li>
+                <li><NavLink className={({ isActive }) => isActive ? NavStyle.active : ''} to="/about">ABOUT</NavLink></li>
             </ul>
         </nav>
     )

@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom"
 import { Header } from '../components/Header/Header'
 import { Navigation } from '../components/Navigation/Navigation'
 import { Divider } from '../components/Divider/Divider'
+import { DateComponent } from '../components/DateComponent/DateComponent'
 
 export function PageLayout() {
     const location = useLocation()
@@ -19,15 +20,14 @@ export function PageLayout() {
             case '/date':
                 return (
                     <>
-                        <h1>ON: 22/08</h1>
-                        <h2>What happened on this day - Here you can enter<br /> a specific date to get only events that happened<br /> on this date</h2>
+                        <DateComponent />
                     </>
                 );
-            case '/since':
+            case '/about':
                 return (
                     <>
-                        <h1>SINCE: 1947</h1>
-                        <h2>What happened on this day - Here you can enter<br />  a specific year to get only events for that year</h2>
+                        <h1>ABOUT US</h1>
+                        <h2>Today in History serves up history’s weirdest moments,<br /> guaranteed to make you laugh and wonder how we’ve made it this far!</h2>
                     </>
                 );
         }

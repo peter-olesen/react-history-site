@@ -16,9 +16,37 @@ body {
     max-width: 1440px;
     height: 100%;
     background: $DarkBG;
-
+    
+    .timelineStyling {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      width: 1154px;
+      margin: 0 auto;
+    }
+    
     h1, h2, h3, h4, h5, h6 {
         color: $LightYellow;
+    }
+    
+    article {
+      .listH3 {
+        font-family: Linden Hill;
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: $Light !important;
+    }
+
+    a {
+      color: $Light;
+      font-size: 1.5rem;
+      
+        img {
+          filter: invert(100);
+          height: 37px;
+          width: 37px;
+        }
+      }
+  
     }
 
     hr {
@@ -26,6 +54,49 @@ body {
       background: $Dark;
       border: none;
       margin: 0; 
+    }
+
+  }
+
+  .listItem {
+    padding: 1rem;
+  }
+  
+  .listItem:nth-child(odd) {
+    border-right: solid 1px $LightYellow;
+    text-align: right;
+    padding-right: 4rem;
+  
+    h3 {
+      border-bottom: solid 2px $LightYellow;
+    }
+  
+    p, a {
+      padding-right: 8rem;
+    }
+  }
+  
+  .listItem:nth-child(even) {
+    border-left: solid 1px $LightYellow;
+    text-align: left;
+    padding-left: 4rem;
+    padding-top: 200px;
+  
+    h3 {
+      border-bottom: solid 2px $LightYellow;
+    }
+  
+    p, a {
+      padding-left: 8rem;
+    }
+  }
+
+  .aboutStyling {
+    width: 1154px;
+    margin: 0 auto;
+
+    a {
+      color: $LightYellow;
     }
   }
 }
