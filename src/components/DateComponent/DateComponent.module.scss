@@ -1,0 +1,36 @@
+@import  '../../scss/_variables.scss';
+
+.dateH1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dateSpan {
+    border-bottom: solid 2px $LightOrange;
+}
+
+.dateInput {
+    width: 120px;
+    height: 86px;
+    font-family: "Limelight", sans-serif;
+    font-size: 96px;
+    font-weight: 400;
+    color: $LightOrange;
+    background: $Dark;
+    outline: none;
+    border: none;
+
+    &::placeholder {
+        color: $LightOrange;
+        font-size: 64px;
+    }
+
+}
+
+input[type=number]::-webkit-outer-spin-button,
+    input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

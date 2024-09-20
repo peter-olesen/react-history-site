@@ -17,15 +17,15 @@ body {
     height: 100%;
     background: $DarkBG;
     
+    h1, h2, h3, h4, h5, h6 {
+        color: $LightYellow;
+    }
+
     .timelineStyling {
       display: grid;
       grid-template-columns: 1fr 1fr;
       width: 1154px;
       margin: 0 auto;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: $LightYellow;
     }
     
     article {
@@ -39,11 +39,14 @@ body {
     a {
       color: $Light;
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
       
         img {
           filter: invert(100);
-          height: 37px;
-          width: 37px;
+          height: 38px;
+          width: 38px;
         }
       }
   

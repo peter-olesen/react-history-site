@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { PageTitle } from '../components/PageTitle/PageTitle'
 import { DarkModeButton } from '../components/DarkModeButton/DarkModeButton'
-// import '../App.scss'
 import readIcon from '../assets/icons/icons8-bookmark-48.png'
 
 export const Home = () => {

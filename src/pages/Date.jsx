@@ -2,13 +2,14 @@ import { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { PageTitle } from '../components/PageTitle/PageTitle'
 import { DarkModeButton } from '../components/DarkModeButton/DarkModeButton'
+import readIcon from '../assets/icons/icons8-bookmark-48.png'
 
 export const Date = () => {
     // const today = new Date()
     // let month = String(today.getMonth() +1).padStart(2,'0')
     // let day = String(today.getDate()).padStart(2,'0')
 
-    const { data, loading, error } = useFetch(`https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/11/26`);
+    const { data, loading, error } = useFetch(`https://api.wikimedia.org/feed/v1/wikipedia/en/onthisday/events/01/01`);
     
     const [visibleCount, setVisibleCount] = useState(10)
 
@@ -27,15 +28,18 @@ export const Date = () => {
         <>
             <PageTitle title="By Date - History Site" />
             <DarkModeButton />
-            <ul>
+            <main className="timelineStyling">
                 {sortedEvents.slice(0, visibleCount).map((event, index) => (
-                    <li key={index}>
-                        <h3>{event.year}</h3>
+                    <article className="listItem" key={index}>
+                        <h3 className="listH3">YEAR: {event.year}</h3>
                         <p>{event.text}</p>
-                        <a href={event.pages?.[0].content_urls.desktop.page} target="_blank">Read more</a>
-                    </li>
-                ))}
-            </ul>
+                        <a href={event.pages?.[0].content_urls.desktop.page} target="_blank">
+                            <img src={readIcon} alt="" />
+                            Read more
+                        </a>
+                    </article>
+                ))}                
+            </main>
             {visibleCount < sortedEvents.length && (
                 <button onClick={loadMoreEvents}>Load More</button>
             )}
